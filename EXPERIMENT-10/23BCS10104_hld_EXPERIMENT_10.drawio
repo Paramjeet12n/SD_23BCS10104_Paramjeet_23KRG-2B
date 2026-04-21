@@ -1,0 +1,136 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="DSbUXnqxEREtEGmdPclS">
+    <mxGraphModel dx="1582" dy="971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e6cEapLkofOJf_R8qBUq-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;backgroundOutline=0;shadow=0;" value="Producer" vertex="1">
+          <mxGeometry height="60" width="120" x="1180" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;backgroundOutline=0;shadow=0;" value="Kafka Consumer" vertex="1">
+          <mxGeometry height="60" width="140" x="1600" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-5" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;backgroundOutline=0;shadow=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1940" y="1580.142857142855" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;backgroundOutline=0;shadow=0;" value="Rabbit Consumer" vertex="1">
+          <mxGeometry height="60" width="150" x="1590" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;backgroundOutline=0;shadow=0;" value="Redis Subscriber" vertex="1">
+          <mxGeometry height="60" width="140" x="1595" y="1741" as="geometry" />
+        </mxCell>
+        <mxCell id="_bMTwqZsaesu9Tvy3G9_-1" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="e6cEapLkofOJf_R8qBUq-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-9" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;backgroundOutline=0;" value="" vertex="1">
+          <mxGeometry height="45" width="50" x="820" y="1557.4" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="USER" vertex="1">
+          <mxGeometry height="30" width="60" x="815" y="1604.9" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-11" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;backgroundOutline=0;shadow=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="e6cEapLkofOJf_R8qBUq-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-12" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.2d.web_ui;backgroundOutline=0;" value="" vertex="1">
+          <mxGeometry height="50" width="60" x="965" y="1554.9" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="USER INTERFACE" vertex="1">
+          <mxGeometry height="30" width="60" x="965" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-14" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-15" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#8C4FFF;strokeColor=#ffffff;shape=mxgraph.aws4.resourceIcon;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;verticalLabelPosition=bottom;verticalAlign=top;fontStyle=0;resIcon=mxgraph.aws4.managed_streaming_for_kafka;backgroundOutline=0;" value="" vertex="1">
+          <mxGeometry height="42" width="56.699999999999996" x="1440" y="1379" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-16" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.014;entryY=0.716;entryDx=0;entryDy=0;entryPerimeter=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-17" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1580" y="1771" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-18" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;backgroundOutline=0;shadow=0;" value="" vertex="1">
+          <mxGeometry height="42" width="50" x="1440" y="1750" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-19" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.714;entryDx=0;entryDy=0;entryPerimeter=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-20" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-21" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.mq_message_queue;backgroundOutline=0;" value="" vertex="1">
+          <mxGeometry height="49.8" width="45" x="1445.85" y="1555.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-22" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.092;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-23" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Data_Lake_Store_Gen1.svg;backgroundOutline=0;shadow=0;" value="" vertex="1">
+          <mxGeometry height="52" width="64" x="1940" y="1558" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-24" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.012;entryY=0.587;entryDx=0;entryDy=0;entryPerimeter=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-25" edge="1" parent="1" source="e6cEapLkofOJf_R8qBUq-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.004;entryY=0.6;entryDx=0;entryDy=0;entryPerimeter=0;backgroundOutline=0;shadow=0;" target="e6cEapLkofOJf_R8qBUq-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="SEND MESSAGE TO THE BROKER" vertex="1">
+          <mxGeometry height="30" width="60" x="1210" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="kafka" vertex="1">
+          <mxGeometry height="30" width="60" x="1440" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="Rebbitmq" vertex="1">
+          <mxGeometry height="30" width="60" x="1440" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="Reddis" vertex="1">
+          <mxGeometry height="30" width="60" x="1440" y="1801" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="consumer that consume the event or message from the event distributer" vertex="1">
+          <mxGeometry height="30" width="205" x="1580" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Stores:&lt;/span&gt;&lt;div&gt;&lt;div&gt;message ID&lt;/div&gt;&lt;div&gt;latency&lt;/div&gt;&lt;div&gt;broker name&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="1902" y="1640" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="Log storage" vertex="1">
+          <mxGeometry height="30" width="60" x="1940" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="highly reliable event distributer mechanism" vertex="1">
+          <mxGeometry height="30" width="150" x="1395" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="queue based event distributer" vertex="1">
+          <mxGeometry height="30" width="90" x="1420" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;backgroundOutline=0;shadow=0;" value="Redis Pub/Sub distributes to all active subscribers" vertex="1">
+          <mxGeometry height="30" width="153" x="1395" y="1711" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Reliability&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Kafka and RabbitMQ flows should ensure message delivery even after consumer downtime.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Redis behavior should demonstrate non-reliability intentionally.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="760" x="690.85" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Performance&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Message processing should happen with minimal delay (low latency).&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;System should handle multiple messages without noticeable lag.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="650" x="670" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Fault Simulation Capability&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;System should support toggling consumers ON/OFF to simulate failures.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="350" x="770" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Fault Simulation Capability&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;System should support toggling consumers ON/OFF to simulate failures.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="280" x="770" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Message Submission&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;The system should allow users to send a message through the UI.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;User must select a broker:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Kafka&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;RabbitMQ&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Redis&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="550" x="1560" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Broker-based Routing&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;The backend should route the message to the selected messaging system.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Each broker should have its own producer logic.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="390" x="1560" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="e6cEapLkofOJf_R8qBUq-48" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Consumer Control&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Users should be able to enable/disable consumers.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="370" x="1560" y="1170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
