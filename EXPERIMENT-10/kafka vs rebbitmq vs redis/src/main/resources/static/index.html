@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kafka vs RabbitMQ vs Redis Pub/Sub</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial; margin: 24px; }
+      .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+      input, select, button { padding: 10px 12px; font-size: 14px; }
+      input { min-width: 320px; flex: 1; }
+      button { cursor: pointer; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 14px; }
+      #logs { height: 420px; overflow: auto; background: #0b0f14; color: #d6deeb; border-radius: 10px; padding: 12px; }
+      .muted { color: #666; font-size: 13px; }
+      .pill { padding: 3px 8px; border-radius: 999px; font-size: 12px; border: 1px solid #ddd; }
+      .summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+      .summaryCard { border: 1px solid #e6e6e6; border-radius: 10px; padding: 10px 12px; background: #fafafa; }
+      .summaryTitle { font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; color: #444; display: flex; gap: 8px; align-items: center; }
+      .dot { width: 9px; height: 9px; border-radius: 999px; display: inline-block; }
+      .dot.kafka { background: #8b5cf6; }
+      .dot.rabbitmq { background: #f97316; }
+      .dot.redis { background: #22c55e; }
+      .kv { margin-top: 6px; display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; font-size: 13px; color: #222; }
+      .k { color: #555; }
+      .v { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .logRow { display: grid; grid-template-columns: 90px 90px 220px 1fr 120px; gap: 10px; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.08); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; }
+      .logHead { position: sticky; top: 0; background: #0b0f14; z-index: 1; border-bottom: 1px solid rgba(255,255,255,0.18); font-weight: 700; color: #a7b4c6; }
+      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 999px; font-size: 11px; border: 1px solid rgba(255,255,255,0.18); width: fit-content; }
+      .badge.kafka { background: rgba(139,92,246,0.12); color: #c4b5fd; }
+      .badge.rabbitmq { background: rgba(249,115,22,0.12); color: #fdba74; }
+      .badge.redis { background: rgba(34,197,94,0.12); color: #86efac; }
+      .type { color: #d6deeb; }
+      .type.RECEIVED { color: #86efac; }
+      .type.SENT { color: #93c5fd; }
+      .type.RECEIVED_BUT_STOPPED, .type.RECEIVED_BUT_STOPPED_REQUEUED { color: #fca5a5; }
+      .lat { color: #cbd5e1; text-align: right; }
+      .msg { color: #e5e7eb; overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <h2>Broker demo (Producer → Broker → Consumer)</h2>
+    <p class="muted">
+      Toggle consumer OFF to observe: <span class="pill">Kafka persists</span>, <span class="pill">RabbitMQ requeues</span>, <span class="pill">Redis Pub/Sub drops</span>.
+    </p>
+
+    <div class="card">
+      <div class="row">
+        <input id="message" placeholder="Message..." />
+        <select id="broker">
+          <option value="kafka">kafka</option>
+          <option value="rabbitmq">rabbitmq</option>
+          <option value="redis">redis</option>
+        </select>
+        <button id="send">Send</button>
+      </div>
+      <div class="row" style="margin-top: 10px;">
+        <label class="row" style="gap: 8px;">
+          <input type="checkbox" id="consumerEnabled" />
+          Consumer enabled
+        </label>
+        <button id="clear">Clear logs</button>
+        <span id="status" class="muted"></span>
+      </div>
+    </div>
+
+    <h3>Summary</h3>
+    <div class="summary">
+      <div class="summaryCard" id="sumKafka">
+        <div class="summaryTitle"><span class="dot kafka"></span>Kafka</div>
+        <div class="kv">
+          <div class="k">sent</div><div class="v" data-k="sent">0</div>
+          <div class="k">received</div><div class="v" data-k="received">0</div>
+          <div class="k">avg latency</div><div class="v" data-k="avg">-</div>
+        </div>
+      </div>
+      <div class="summaryCard" id="sumRabbit">
+        <div class="summaryTitle"><span class="dot rabbitmq"></span>RabbitMQ</div>
+        <div class="kv">
+          <div class="k">sent</div><div class="v" data-k="sent">0</div>
+          <div class="k">received</div><div class="v" data-k="received">0</div>
+          <div class="k">avg latency</div><div class="v" data-k="avg">-</div>
+        </div>
+      </div>
+      <div class="summaryCard" id="sumRedis">
+        <div class="summaryTitle"><span class="dot redis"></span>Redis Pub/Sub</div>
+        <div class="kv">
+          <div class="k">sent</div><div class="v" data-k="sent">0</div>
+          <div class="k">received</div><div class="v" data-k="received">0</div>
+          <div class="k">avg latency</div><div class="v" data-k="avg">-</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Logs</h3>
+    <div id="logs"></div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
+
